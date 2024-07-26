@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Todo</title>
+</head>
+<body>
+<h1>Edit Todo</h1>
+<form action="/editTodo" method="post" th:action="@{/editTodo}">
+    <input type="hidden" name="id" th:value="${todo.id}">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" th:value="${todo.title}">
+    <label for="priority">Priority:</label>
+    <input type="text" id="priority" name="priority" th:value="${todo.priority}">
+    <button type="submit">Update</button>
+</form>
+<a href="/todos">Back to list</a>
+</body>
+</html>
