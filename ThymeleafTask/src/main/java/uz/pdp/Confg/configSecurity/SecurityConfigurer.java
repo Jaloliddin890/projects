@@ -77,5 +77,5 @@ public class SecurityConfigurer {
         return new BCryptPasswordEncoder();
     }
 
-6
+
 }

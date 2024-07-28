@@ -91,8 +91,8 @@ public class TodoController {
     public String displayTodos(@AuthenticationPrincipal CustomUserDetails customUserDetails, Model model) {
 
         Long id =customUserDetails.getAuthUser().getId();
-        List<Todo> todos = authRoleDao.findByUserID(id);
-        model.addAttribute("todos", todos);
+//        List<Todo> todos = authRoleDao.findByUserID(id);
+//        model.addAttribute("todos", todos);
         return "displayTodos";
     }
 
