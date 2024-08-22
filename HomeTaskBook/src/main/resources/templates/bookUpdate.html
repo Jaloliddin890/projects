@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Book</title>
+</head>
+<body>
+<h1>Update Book</h1>
+<form action="/update" method="post">
+    <input type="hidden" id="id" name="id" th:value="${book.id}">
+
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" th:value="${book.title}" required><br><br>
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" th:value="${book.author}" required><br><br>
+
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" step="0.01" th:value="${book.price}" required><br><br>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required th:text="${book.description}"></textarea><br><br>
+    <input type="submit" value="Update Book">
+</form>
+</body>
+</html>

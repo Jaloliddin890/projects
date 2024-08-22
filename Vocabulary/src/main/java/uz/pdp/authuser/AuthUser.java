@@ -1,4 +1,4 @@
-package uz.pdp.domains;
+package uz.pdp.authuser;
 
 
 import lombok.*;
@@ -19,11 +19,11 @@ public class AuthUser {
 
     private String password;
 
-    private List<AuthRoles> roles;
+    private AuthRole role;
 
 
+    public enum AuthRole {
+        ADMIN,
+        USER
+    }
 }
-
-
-
-
